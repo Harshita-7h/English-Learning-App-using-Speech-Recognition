@@ -1,0 +1,115 @@
+/* Basic reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background and overall layout */
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  /* This will apply to the whole home container */
+
+  
+  /* Background overlay that applies blur and opacity */
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/bg1.jpg'); /* Updated to directly reference the image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur */
+    opacity: 0.65; /* Reduce opacity */
+    z-index: -1; /* Ensure it stays behind the content */
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Introduction text */
+  .intro {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    max-width: 80%;
+    line-height: 1.6;
+  }
+  
+  /* Features section */
+  .features {
+    margin: 30px 0;
+  }
+  
+  .features h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Button styling */
+  .start-btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    background-color: #ff7a00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .start-btn:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+  }
+  
+  
+  /* Responsive design: on smaller screens, reduce font size */
+  @media (max-width: 600px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .intro {
+      font-size: 1rem;
+    }
+  
+    .features ul li {
+      font-size: 1rem;
+    }
+  
+    .start-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
